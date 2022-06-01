@@ -1,0 +1,11 @@
+header {
+    display: flex;
+}
+
+#high-score {
+    width:80%
+}
+
+#timer {
+    width:20%
+}
