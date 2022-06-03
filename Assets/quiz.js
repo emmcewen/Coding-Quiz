@@ -1,34 +1,29 @@
-var introEl = document.querySelector("#intro")
-var qaViewEl = document.querySelector("#qa-view")
+
+
 var timerEl = document.querySelector("#timer")
+var introEl = document.querySelector(".intro")
+var startQuizEl = document.querySelector("#start-quiz")
 var titleEl = document.querySelector("#title")
 var answer1El = document.querySelector("#answer1")
 var answer2El = document.querySelector("#answer2")
 var answer3El = document.querySelector("#answer3")
 var answer4El = document.querySelector("#answer4")
-var startQuizBtn = document.querySelector("#start-quiz")
 var timeRemaining = 75
 var clockid
 
 var question = [{
-    title: "new question 1",
+    title: "Question 1",
     answers: ["answer1", "answer2", "answer3", "answer4"],
     solution: "answer0"
-}]
-
-var question = [{
-    title: "new question 2",
+},{
+    title: "Question 2",
     answers: ["answer1", "answer2", "answer3", "answer4"],
     solution: "answer1"
-}]
-
-var question = [{
-    title: "new question 3",
+},{
+    title: "Question 3",
     answers: ["answer1", "answer2", "answer3", "answer4"],
     solution: "answer2"
-}]
-
-var question = [{
+},{
     title: "new question 4",
     answers: ["answer1", "answer2", "answer3", "answer4"],
     solution: "answer3"
@@ -43,13 +38,14 @@ function countDown() {
 
 
 function startGame() {
-    qaViewEl.classList.remove("hide")
+   startQuizEl.classList.remove("hide")
     introEl.classList.add("hide")
     clockid = setInterval(countDown, 1000)
+    displayQuestions()
 }
 
 function displayQuestions() {
-    titleEl.textContent = question[index]
+    titleEl.textContent = question[index].title
     answer1El.textContent = question[index].answer[0]
     answer2El.textContent = question[index].answer[1]
     answer3El.textContent = question[index].answer[2]
@@ -59,6 +55,7 @@ function displayQuestions() {
 
 function nextQuestion() {
     index++
+    displayQuestions()
 }
 
 answer1El.addEventListener = ("click", nextQuestion)
@@ -67,4 +64,4 @@ answer3El.addEventListener = ("click", nextQuestion)
 answer4El.addEventListener = ("click", nextQuestion)
 
 
-startQuizBtn.addEventListener("click", startGame)
+startQuizEl.addEventListener("click", startGame)
