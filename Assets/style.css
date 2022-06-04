@@ -2,7 +2,9 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 .container, #intro{
     padding: 0;
     margin: 0;
@@ -14,15 +16,17 @@
 }
 
 
-#score-timer {
+.score-timer{
     display:flex;
  }
 
+ .start-btn {
+    display: inline;
+    color: blue;
 
 
 #high-score {
     width: 80%;
- 
 }
  
 #timer {
