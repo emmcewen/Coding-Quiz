@@ -1,40 +1,112 @@
-* *::before, *::after {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-.container, #intro{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+html {
+    font: size 25px;
 }
 
+body {
+    height: 100%;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(228, 235, 237);
+    overflow: hidden;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    padding-bottom: 4rem;
+}
+.hide {
+    display:none;
+}
+
+main {
+    padding-top: 20px;
+}
+
+h1 {
+    font-size: 2.2em;
+    text-align: center;
+    color: rgb(14, 24, 161);
+    padding-top: 1em;
+    letter-spacing: 0.4em;
+}
+
+h2 {
+    font-size:15px;
+    color: rgb(14, 24, 161);
+}
+
+p {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 3px;
+}
 
 .score-timer{
     display:flex;
  }
 
- .start-btn {
-    display: inline;
-    color: blue;
-
 
 #high-score {
+    text-align: start;
+}
+
+#timer {
+    text-align: end;
+}
+
+
+#intro {
+    background-color: rgb(8, 96, 144);
+    margin-top: 20px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    border-style: ridge;
+}
+
+#high-score {
+    color: rgb(10, 10, 11);
     width: 80%;
 }
- 
-#timer {
-    width: 20%;
- 
+
+#high-score:hover {
+    text-decoration: none;
+    color: rgb(0, 148, 193);
+}
+
+#high-score:active {
+    color:rgb(10, 11, 11);
+}  
+
+button.start-quiz {
+    background-color: rgb(8, 96, 144);
+    width: 15em;
+    border: solid 5px rgb(0,0,0);
+    border-radius: 40px;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.1s;;
+}
+
+button.start-quiz:hover {
+    background-color:rgb(14, 26, 161);
+    color: rgb(250, 242, 242, 0.916);
+    border: solid 5px rgb(242,242,242);
+    letter-spacing: -0.05em;
 }
 
 
-.hide  {
-display: none;
+@media (max-width: 823px) and (min-height: 320px) and (orientation: landscape) {
+
+    header.container {
+        padding-bottom: 2rem;
+    }
+
+    main {
+        font-size: 70%;
+    }
 }

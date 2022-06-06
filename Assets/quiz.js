@@ -1,9 +1,10 @@
 
 
 var timerEl = document.querySelector("#timer")
-var introEl = document.querySelector(".intro")
-var startQuizEl = document.querySelector("#start-quiz")
+var introEl = document.querySelector("#intro")
+var startQuizEl = document.querySelector(".start-quiz")
 var titleEl = document.querySelector("#title")
+var questionEl= document.querySelector("#question-container")
 var answer1El = document.querySelector("#answer1")
 var answer2El = document.querySelector("#answer2")
 var answer3El = document.querySelector("#answer3")
@@ -46,6 +47,7 @@ function startGame() {
 
 function displayQuestions() {
     titleEl.textContent = question[index].title
+    startQuizEl.classList.add("hide")
     answer1El.textContent = question[index].answer[0]
     answer2El.textContent = question[index].answer[1]
     answer3El.textContent = question[index].answer[2]

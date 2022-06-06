@@ -12,26 +12,33 @@
 
 
 <body>
-    <div class="score-timer">
+    <header class="score-timer">
         <span id="high-score"> New High Score</span>
         <span id="timer">Time Remaining</span>
-    </div>
-    <div class="intro">
-        <h1 id="Main title" class="cqc-1">Coding Quiz Challenge</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam necessitatibus maxime soluta saepe provident.
-            Alias reiciendis rem, omnis, maxime odit neque iusto non nemo, asperiores nam hic sint error quo.</p>
-            <div class="start-btn">
-            <button id="start-quiz">Start Game</button>
-        </div>  
-    </div>
+    </header>
+    <main class="container">
+        <div class="row justify content=center">
+            <h1>(Coding Quiz Challenge)</h1>
+        </div>
+        <figure id="intro">
+            <div class="row"></div>
+            <p>Select the correct answer for each of the questions. Wrong answers will cost you up ot 10 seconds! Try to
+                beat the clock!</p>
+            </div>
+        </figure>
+
+        <div class="container" id="button"></div>
+        <button class="start-quiz">Start Quiz</button>
+        </div>
+    </main>
+    <div id="question-container" class="hide">
     <h2 id="title">Question 1</h2>
-    <div id="question-container" class="hide"></div>
-        <ul>
-            <li> <button id="answer1">Answer 1</button></li>
-            <li> <button id="answer2">Answer 2</button></li>
-            <li> <button id="answer3">Answer 3</button></li>
-            <li> <button id="answer4">Answer 4</button></li>
-        </ul>
+    <ul>
+        <li> <button id="answer1">Answer 1</button></li>
+        <li> <button id="answer2">Answer 2</button></li>
+        <li> <button id="answer3">Answer 3</button></li>
+        <li> <button id="answer4">Answer 4</button></li>
+    </ul>
     </div>
     <div class="input-intial" class="hide"></div>
     <input type="text" id="enter-initial">
