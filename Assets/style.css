@@ -10,11 +10,7 @@ body {
     overflow: hidden;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: auto;
-    padding-bottom: 4rem;
-}
+
 .hide {
     display:none;
 }
@@ -42,6 +38,13 @@ p {
     text-align: center;
     line-height: 20px;
     letter-spacing: 3px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    padding-bottom: 20px;
 }
 
 .score-timer{
@@ -80,19 +83,20 @@ p {
     color:rgb(10, 11, 11);
 }  
 
-button.start-quiz {
+button.quiz {
     background-color: rgb(8, 96, 144);
-    width: 15em;
-    border: solid 5px rgb(0,0,0);
-    border-radius: 40px;
+    width: 200px;
+    border: solid 3px rgb(0,0,0);
+    border-radius: 20px;
     color: rgb(255, 255, 255);
     padding: 20px;
     text-align: center;
     text-decoration: none;
     transition: all 0.1s;;
+    justify-content: center;
 }
 
-button.start-quiz:hover {
+button.quiz:hover {
     background-color:rgb(14, 26, 161);
     color: rgb(250, 242, 242, 0.916);
     border: solid 5px rgb(242,242,242);
