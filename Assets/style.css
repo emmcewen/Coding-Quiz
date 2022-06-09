@@ -9,13 +9,19 @@ body {
     background-color: rgb(228, 235, 237);
     overflow: hidden;
 }
+ul li {
+    list-style: none;
+}
 
+header .score-timer{
+    display: flex;
+}
 
 .hide {
     display:none;
 }
 
-main {
+main{
     padding-top: 20px;
 }
 
@@ -47,17 +53,11 @@ p {
     padding-bottom: 20px;
 }
 
-.score-timer{
-    display:flex;
- }
 
-
-#high-score {
-    text-align: start;
-}
 
 #timer {
     text-align: end;
+    padding-left:600px ;
 }
 
 
@@ -69,19 +69,26 @@ p {
     border-style: ridge;
 }
 
-#high-score {
+#highscore {
+    text-align: start;
+    padding-right: 100px;
     color: rgb(10, 10, 11);
     width: 80%;
 }
 
-#high-score:hover {
+
+#highscore:hover {
     text-decoration: none;
     color: rgb(0, 148, 193);
 }
 
-#high-score:active {
+#highscore:active {
     color:rgb(10, 11, 11);
 }  
+
+#button {
+  justify-content: center;
+}
 
 button.quiz {
     background-color: rgb(8, 96, 144);
