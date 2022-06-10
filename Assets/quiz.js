@@ -12,12 +12,12 @@ var answer1El = document.getElementById("answer1")
 var answer2El = document.getElementById("answer2")
 var answer3El = document.getElementById("answer3")
 var answer4El = document.getElementById("answer4")
-var initalEl = document.querySelector("#input-intial")
-var saveEl = document.querySelector("#save")
+var initialEl = document.querySelector("#input-initial")
 var highscoreEl = document.querySelector("#highscore")
+var initialsEl = document.querySelector("#initials")
 
 var timeRemaining = 75
-var highscores
+var highScores
 var clockid;
 
 var question = [{
@@ -46,12 +46,14 @@ function countDown() {
     if (timeRemaining === 0) {
         clearInterval(clockid)
         questionEl.classList.add("hide")
-        initallEl.classList.remove("hide")
+        initialEl.classList.remove("hide")
+        initialsEl.classList.remove("hide")
     }
 }
 
 function startGame() {
     questionEl.classList.remove("hide")
+    initialsEl.classList.add("hide")
     introEl.classList.add("hide")
     clockid = setInterval(countDown, 1000)
     displayQuestions()
@@ -82,7 +84,8 @@ function nextQuestion(event) {
     else {
         clearInterval(clockid)
         questionEl.classList.add("hide")
-        initalEl.classList.remove("hide")
+        initialEl.classList.remove("hide")
+       initialsEl.classList.remove("hide")
     }
 
     function finishQuiz() {
@@ -97,12 +100,12 @@ function nextQuestion(event) {
 }
     function getInitials() {
         var initial = document.createElement("input");
-        initalEl.innerHTML = "";
+        initialEl.innerHTML = "";
         document.body.children[1].children[0].children[0].appendChild(initial);
-        initalEl.addEventListener("input", function () {
-        var initalEl = intial.value;
-        initalEl = intial.toUpperCase();
-        if (initalEl.length === 3) {
+        initialEl.addEventListener("input", function () {
+        var initialEl = initial.value;
+        initialEl = initial.toUpperCase();
+        if (initialEl.length === 3) {
             highScore.push(score);
             storeScore(highscore);
         }
