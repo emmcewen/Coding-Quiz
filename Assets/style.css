@@ -23,6 +23,7 @@ header .score-timer{
 
 main{
     padding-top: 20px;
+    justify-content: center;
 }
 
 h1 {
@@ -46,6 +47,9 @@ p {
     letter-spacing: 3px;
 }
 
+form {
+    text-align: center;
+   }
 
 .container {
     display: grid;
@@ -84,11 +88,11 @@ p {
 
 #highscore:active {
     color:rgb(10, 11, 11);
-}  
+} 
 
 #button {
-  justify-content: center;
-}
+    justify-content: center;
+  }
 
 button.quiz {
     background-color: rgb(8, 96, 144);

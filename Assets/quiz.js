@@ -13,9 +13,8 @@ var answer2El = document.getElementById("answer2")
 var answer3El = document.getElementById("answer3")
 var answer4El = document.getElementById("answer4")
 var initalEl = document.querySelector("#input-intial")
-var saveEl= document.querySelector("#save")
+var saveEl = document.querySelector("#save")
 var highscoreEl = document.querySelector("#highscore")
-var sectionEl = document.querySelector("section")
 
 var timeRemaining = 75
 var highscores
@@ -86,39 +85,44 @@ function nextQuestion(event) {
         initalEl.classList.remove("hide")
     }
 
-    function endGame() {
-        var sectionEl = document.querySelector("section");
-        sectionEl.innerHTML = "";
+    function finishQuiz() {
+        var section = document.querySelector("section");
+        section.innerHTML = "";
         score += secondsLeft;
         secondsLeft = 1;
-    }
+        displayScore();
+    };
 
-    function highScore(score) {
-        getInitials();
-    }
+
+}
     function getInitials() {
         var initial = document.createElement("input");
         initalEl.innerHTML = "";
         document.body.children[1].children[0].children[0].appendChild(initial);
         initalEl.addEventListener("input", function () {
-            var initalEl = intial.value;
-            initalEl = intial.toUpperCase();
-            if (initalEl.length === 3) {
-                highScore.push(score);
-                storeScore(highscore);
-            }
-        });
-    }
+        var initalEl = intial.value;
+        initalEl = intial.toUpperCase();
+        if (initalEl.length === 3) {
+            highScore.push(score);
+            storeScore(highscore);
+        }
+    });
 }
 
-function storeScore(highScore) {
-    localStorage.setItem("highscore", JSON.stringify(highScore));
+
+    function storeScore(highScore) {
+        localStorage.setItem("highscore", JSON.stringify(highScore));
+}
+    function resetScores() {
+        localStorage.removeItem("highScores");
 }
 
-answer1El.addEventListener("click", nextQuestion)
-answer2El.addEventListener("click", nextQuestion)
-answer3El.addEventListener("click", nextQuestion)
-answer4El.addEventListener("click", nextQuestion)
+        answer1El.addEventListener("click", nextQuestion)
+        answer2El.addEventListener("click", nextQuestion)
+        answer3El.addEventListener("click", nextQuestion)
+        answer4El.addEventListener("click", nextQuestion)
 
 
-startEl.addEventListener("click", startGame)
+        startEl.addEventListener("click", startGame)
+
+     
