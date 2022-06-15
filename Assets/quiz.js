@@ -15,9 +15,8 @@ var answer4El = document.getElementById("answer4")
 var initialEl = document.querySelector("#input-initial")
 var highscoreEl = document.querySelector("#highscore")
 var initialsEl = document.querySelector("#initials")
-
 var timeRemaining = 75
-var highScores
+var highScores;
 var clockid;
 
 var question = [{
@@ -85,7 +84,7 @@ function nextQuestion(event) {
         clearInterval(clockid)
         questionEl.classList.add("hide")
         initialEl.classList.remove("hide")
-       initialsEl.classList.remove("hide")
+        initialsEl.classList.remove("hide")
     }
 
     function finishQuiz() {
@@ -94,38 +93,32 @@ function nextQuestion(event) {
         score += secondsLeft;
         secondsLeft = 1;
         displayScore();
-    };
+    }
 
-
-}
+    }
     function getInitials() {
         var initial = document.createElement("input");
         initialEl.innerHTML = "";
         document.body.children[1].children[0].children[0].appendChild(initial);
         initialEl.addEventListener("input", function () {
-        var initialEl = initial.value;
-        initialEl = initial.toUpperCase();
-        if (initialEl.length === 3) {
-            highScore.push(score);
-            storeScore(highscore);
-        }
-    });
-}
-
+            var initialEl = initial.value;
+            initialEl = initial.toUpperCase();
+            if (initialEl.length === 3) {
+                highScore.push(score);
+                storeScore(highscore);
+            }
+        });
+    }
 
     function storeScore(highScore) {
         localStorage.setItem("highscore", JSON.stringify(highScore));
-}
+    }
     function resetScores() {
         localStorage.removeItem("highScores");
-}
-
+    }
         answer1El.addEventListener("click", nextQuestion)
         answer2El.addEventListener("click", nextQuestion)
         answer3El.addEventListener("click", nextQuestion)
         answer4El.addEventListener("click", nextQuestion)
-
-
         startEl.addEventListener("click", startGame)
-
-     
+    
