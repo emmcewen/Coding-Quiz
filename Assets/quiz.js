@@ -14,6 +14,7 @@ var answer3El = document.getElementById("answer3")
 var answer4El = document.getElementById("answer4")
 var initialEl = document.querySelector("#input-initial")
 var highscoreEl = document.querySelector("#highscore")
+var scoresEl=document.querySelector("#score")
 var initialsEl = document.querySelector("#initials")
 var timeRemaining = 75
 var highScores;
@@ -85,14 +86,14 @@ function nextQuestion(event) {
         questionEl.classList.add("hide")
         initialEl.classList.remove("hide")
         initialsEl.classList.remove("hide")
+        finishQuiz()
     }
 
     function finishQuiz() {
         var section = document.querySelector("section");
         section.innerHTML = "";
-        score += secondsLeft;
-        secondsLeft = 1;
-        displayScore();
+        //score += secondsLeft;
+        scoresEl.innerHTML=timeRemaining
     }
 
     }
