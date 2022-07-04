@@ -61,7 +61,9 @@ form {
 
 #timer {
     text-align: end;
-    padding-left:600px ;
+    padding-left: 200px;
+    color: rgb(10, 10, 11);
+    width: 80%;
 }
 
 
